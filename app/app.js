@@ -11,6 +11,8 @@ const PORT=3000;
 //앱세팅
 app.set("views","./src/views");
 app.set("view engine", "ejs");
+app.use(express.static(`${__dirname}/src/public`)); // /src/public을 정적static 경로로 추가
+
 
 
 app.use("/",home); //여기선 home으로 이동->index.js로 이동
